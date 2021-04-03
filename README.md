@@ -59,6 +59,5 @@ you can change either your security settings (new developer account is recommend
   
   
  ### Sample gif made from a recorded video:
- ![alt text][logo]
- [logo]: https://github.com/sand-ki/rodent-motion-detector/blob/master/assets/mouse.gif "Logo Title Text 2"
+ ![sample-gif](https://github.com/sand-ki/roedent-motion-detector/blob/main/assets/mouse.gif)
  
