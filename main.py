@@ -1,7 +1,6 @@
 # USAGE
-# python main.py --ip 192.168.178.66 --port 5000
-# python main.py --ip 192.168.178.66 --port 5000 --records records --fps 20
-# python main.py --ip 192.168.178.66 --port 5000 --records T:/Python/Saved_videos --fps 20
+# python main.py --ip 192.168.178.216 --port 5000 --records /records --fps 20
+
 
 from flask import Response
 from flask import Flask
@@ -35,7 +34,7 @@ def detect_motion(frameCount):
 	# grab global references to the video stream, records frame, and
 	# lock variables
 	global vs, outputFrame, lock
-	detector = MotionDetector(accumWeight=0.1)
+	detector = MotionDetector(weight=0.1)
 	total = 0
 
 	# initialize key clip writer and the consecutive number of
@@ -66,7 +65,7 @@ def detect_motion(frameCount):
 		# number to construct a reasonable background model, then
 		# continue to process the frame
 		if total > frameCount:
-			motion = detector.detect(frame_mod)
+			motion = detector.detect(image=frame_mod, area_threshold=args["area_threshold"])
 			if motion is not None:
 				# unpack the tuple and draw the box surrounding the
 				# "motion area" on the records frame
@@ -76,20 +75,20 @@ def detect_motion(frameCount):
 				consecFrames = 0
 
 				# Send maximum one email in every X minutes
-				if (datetime.datetime.now() - time_now).total_seconds() > 60 * 10:
-					_, saved_image = vs.read()
-					time_now = datetime.datetime.now()
-					timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-					image_path = f"{args['records']}/cap_img_{timestamp}.png"
-					cv2.imwrite(image_path, saved_image)
-					send_email(image_path)
+				if args["email"] is not None:
+					if (datetime.datetime.now() - time_now).total_seconds() > 60 * args["email"]:
+						_, saved_image = vs.read()
+						time_now = datetime.datetime.now()
+						image_path = f"{args['records']}/cap_img_{time_now.strftime('%Y%m%d-%H%M%S')}.png"
+						cv2.imwrite(image_path, saved_image)
+						send_email(image_path)
 
 				# if we are not already recording, start recording
 				if not er.recording:
-					path = f"{args['records']}/{timestamp}.avi"
+					path = f"{args['records']}/{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}.avi"
 					er.start(path, cv2.VideoWriter_fourcc(*args["codec"]),
 							 args["fps"])
-
+					print(f"should be recording to {path}")
 
 		# otherwise, no action has taken place in this frame, so
 		# increment the number of consecutive frames that contain
@@ -160,7 +159,7 @@ if __name__ == '__main__':
 		help="ephemeral port number of the server (1024 to 65535)")
 	ap.add_argument("-f", "--frame-count", type=int, default=32,
 		help="# of frames used to construct the background model")
-	ap.add_argument("-rec", "--records", required=True, default="records",
+	ap.add_argument("-rec", "--records", default="records",
 					help="path to records directory")
 	ap.add_argument("-fps", "--fps", type=int, default=32,
 					help="FPS of records video")
@@ -168,6 +167,10 @@ if __name__ == '__main__':
 					help="codec of records video")
 	ap.add_argument("-b", "--buffer-size", type=int, default=32,
 					help="buffer size of video clip writer")
+	ap.add_argument("-at", "--area-threshold", type=int, default=1,
+					help="area in pixels of small contours to be filtered out")
+	ap.add_argument("-em", "--email", type=int, default=None,
+					help="frequency of emails (in minutes) to be sent in case of detection")
 	args = vars(ap.parse_args())
 
 	# start a thread that will perform motion detection

@@ -17,7 +17,7 @@ class MotionDetector:
         # update the background frame
         cv2.accumulateWeighted(image, self.background, self.weight)
 
-    def detect(self, image, threshold=13):
+    def detect(self, image, area_threshold, threshold=13):
         # compute the absolute difference between the background frame and
         # and the image passed in, then threshold the delta image
         frame_diff = cv2.absdiff(self.background.astype("uint8"), image)
@@ -38,10 +38,14 @@ class MotionDetector:
         # if no contour found
         if len(cnts) == 0:
             return None
+        # all contours found smaller than the area threshold
+        elif all([True if cv2.contourArea(cnt) < area_threshold else False for cnt in cnts]):
+            return None
+
         # contour found and looping through them
         for cnt in cnts:
             # filter out too small  contours
-            if cv2.contourArea(cnt) < 500:
+            if cv2.contourArea(cnt) < area_threshold:
                 continue
             # update the minimum and maximum bounding box regions
             (x, y, w, h) = cv2.boundingRect(cnt)
