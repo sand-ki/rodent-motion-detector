@@ -33,11 +33,11 @@ pip install -r requirements.txt
 You can start the applaiction by executing the following command:
 
 ```
-python main.py
+python main.py --ip:[your ip address] -- port [port number from (1024 to 65535)] 
 ```
 
 Further parameters to define in command line:
-* --ip: IP address of the device used for flask server
+* --ip: IP address of the device used for flask server (ipconfig in command line)
 * --port: port number
 * --frame-count: number of frames of the background
 * --records: output directory where the recorded videos are saved

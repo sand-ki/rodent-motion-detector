@@ -10,12 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18078c74-bb78-4809-8fc8-e28a388a18f8" name="Default Changelist" comment="- readme gif embedding">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="18078c74-bb78-4809-8fc8-e28a388a18f8" name="Default Changelist" comment="- readme adjusted&#10;- reqs added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motiondetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/motiondetector.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617488247775</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- adding area threshold&#10;- adding email input&#10;- fixing video names&#10;- adding reqs.txt">
+      <created>1617567351179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617567351180</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- readme adjusted&#10;- reqs added">
+      <created>1617567580289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617567580289</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,7 +130,9 @@
     <MESSAGE value="- add" />
     <MESSAGE value="- git init" />
     <MESSAGE value="- readme gif embedding" />
-    <option name="LAST_COMMIT_MESSAGE" value="- readme gif embedding" />
+    <MESSAGE value="- adding area threshold&#10;- adding email input&#10;- fixing video names&#10;- adding reqs.txt" />
+    <MESSAGE value="- readme adjusted&#10;- reqs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="- readme adjusted&#10;- reqs added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617482085886">
@@ -134,10 +147,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1617487589889" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1617555281054">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1617567582433">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1617555281054" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1617567582433" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617487414761">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
