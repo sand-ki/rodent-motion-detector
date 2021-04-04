@@ -49,7 +49,7 @@ Further parameters to define in command line:
 
 You can use them like:
 ```
-python main.py --ip: 192.168.178.6 -- port 6000 --records C:/Users/Videos --fps 20
+python main.py --ip: 192.168.178.6 -- port 6000 --records C:/Users/Videos --fps 20 --are-threshold 500 --email 30
 ```
 
 ### Features:
