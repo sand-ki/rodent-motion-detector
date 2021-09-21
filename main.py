@@ -88,7 +88,6 @@ def detect_motion(frameCount):
 					path = f"{args['records']}/{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}.avi"
 					er.start(path, cv2.VideoWriter_fourcc(*args["codec"]),
 							 args["fps"])
-					print(f"should be recording to {path}")
 
 		# otherwise, no action has taken place in this frame, so
 		# increment the number of consecutive frames that contain

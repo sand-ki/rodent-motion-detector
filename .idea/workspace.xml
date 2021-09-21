@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18078c74-bb78-4809-8fc8-e28a388a18f8" name="Default Changelist" comment="- readme adjusted&#10;- reqs added">
+    <list default="true" id="18078c74-bb78-4809-8fc8-e28a388a18f8" name="Default Changelist" comment="- readme adjusted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Transaction_history" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -108,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617567580289</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- readme adjusted">
+      <created>1617568277924</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617568277924</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,25 +138,26 @@
     <MESSAGE value="- readme gif embedding" />
     <MESSAGE value="- adding area threshold&#10;- adding email input&#10;- fixing video names&#10;- adding reqs.txt" />
     <MESSAGE value="- readme adjusted&#10;- reqs added" />
-    <option name="LAST_COMMIT_MESSAGE" value="- readme adjusted&#10;- reqs added" />
+    <MESSAGE value="- readme adjusted" />
+    <option name="LAST_COMMIT_MESSAGE" value="- readme adjusted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617482085886">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="355" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1617482085886" />
-    <state x="1060" y="467" key="FileChooserDialogImpl" timestamp="1617564447605">
+    <state x="1060" y="467" key="FileChooserDialogImpl" timestamp="1617667699794">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1060" y="467" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1617564447605" />
+    <state x="1060" y="467" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1617667699794" />
     <state x="781" y="345" key="SettingsEditor" timestamp="1617487589889">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1617487589889" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1617567582433">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1617568283815">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1617567582433" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1617568283815" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617487414761">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
